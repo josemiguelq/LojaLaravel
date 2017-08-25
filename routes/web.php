@@ -18,7 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/brand', 'BrandController@index')->name('brand');
+Route::get('/brand/new', 'BrandController@newbrand');
+Route::post('/brand/save', 'BrandController@savebrand');
