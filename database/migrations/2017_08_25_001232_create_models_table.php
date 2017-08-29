@@ -13,10 +13,11 @@ class CreateModelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('models', function (Blueprint $table) {
+        Schema::create('serialmodels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('brand');
+            $table->integer('brand_id')->unsigned();
+            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
             $table->timestamps();
         });
     }

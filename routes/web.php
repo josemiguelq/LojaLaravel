@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/brand', 'BrandController@index')->name('brand');
-Route::get('/brand/new', 'BrandController@newbrand');
-Route::post('/brand/save', 'BrandController@savebrand');
+Route::get('home', 'HomeController@index')->name('home');
+Route::get('brand', 'BrandController@indexAction')->name('brand');
+Route::get('brand/new', 'BrandController@newAction');
+Route::post('brand/save', 'BrandController@saveAction');
+
+Route::get('model', 'serialModelController@indexAction')->name('models');
+Route::get('model/new', 'serialModelController@newAction');
+Route::post('model/save', 'serialModelController@saveAction');

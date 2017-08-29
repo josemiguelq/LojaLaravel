@@ -6,12 +6,10 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">Dashboard
-                    <a class="pull-right" href="{{url('brand/new')}}">Nova Marca</a>
+                    <a class="pull-right" href="{{url('model/new')}}">Novo Modelo</a>
                     </div>
                     <div class="panel-body">
-                        @foreach ($brands as $brand)
-                        {{$brand->name}}
-                        @endforeach
+                        You are logged in!                        
                     </div>
                 </div>
             </div>

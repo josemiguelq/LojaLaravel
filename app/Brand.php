@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
+    protected $fillable =[
+        'name'
+    ];
     public  function  models(){
-        return $this->hasMany('App\serialModel');
+        return $this->belongsTo(serialModel::class, 'brand_id');
     }
 }
